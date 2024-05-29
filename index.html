@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+    <!-- CSS bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Adding internal CSS styles -->
+    <style>
+        form {
+            margin-top: 50px;
+        }
+
+        label {
+            font-weight: bolder;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-bottom: 3px;
+            margin-left: 2px;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body class="bg-dark">
+    
+    <!-- Creating a form to get user Input and output the weather details -->
+    <form onsubmit="event.preventDefault(); weather();">
+        <div class="container bg-warning d-flex flex-column justify-content-center rounded-4" id="container">
+            <h1 class="bg-transparent text-center font-weight-bolder mt-3">
+                Weather App
+            </h1>
+
+            <!-- Input field to search the meaning of a word -->
+            <label for="city" class="city" >Enter a city: </label>
+            <input type="search" 
+                class="form-control form-control-sm p-2" 
+                name="city" id="city" 
+                placeholder="City Name">
+
+            <!-- Submit button, outputs meaning of the word when clicked -->
+            <button type="submit" class="btn btn-info rounded-pill mt-3 mb-2">
+                Current Weather
+            </button>
+
+            <!-- Field to display the meaning of the word searched -->
+            <div id="cardRow"></div>
+        </div>
+    </form>
+
+
+    <!-- Javascript links -->
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
